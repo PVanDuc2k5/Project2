@@ -1,10 +1,10 @@
 import nmap
 
 
-def run_nmap_scan(ip):
+def run_nmap_scan(ip, arguments='-sV -Pn -T4 --version-light --top-ports 10 --max-retries 1 --host-timeout 20s'):
 
     nm=nmap.PortScanner()
-    nm.scan(ip,arguments='-sV')
+    nm.scan(ip, arguments=arguments)
     list_port = []  
     for host in nm.all_hosts():     
         for proto in nm[host].all_protocols():
