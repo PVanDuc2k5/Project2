@@ -4,7 +4,8 @@
 import argparse
 import time
 
-from cve_service_collector import fetch_cves_multisource, init_db, upsert_cves
+from cve_db import init_db, upsert_cves
+from cve_sources import fetch_cves_multisource
 
 
 def parse_args() -> argparse.Namespace:

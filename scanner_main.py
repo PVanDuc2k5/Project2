@@ -1,6 +1,6 @@
 import my_scanner
 
-from cve_service_collector import find_matching_cves, init_db
+from cve_db import find_matching_cves, init_db
 
 
 def _format_port_line(port_info: dict) -> str:
